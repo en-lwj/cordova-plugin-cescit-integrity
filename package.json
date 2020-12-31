@@ -1,0 +1,26 @@
+{
+  "name": "cordova-plugin-cescit-integrity",
+  "version": "1.0.0",
+  "author": {
+    "name": "lwj"
+  },
+  "description": "本插件基于cordova-plugin-antitampering，有apk完整性检验，res资源检验，assert资源检验的功能。",
+  "cordova": {
+    "id": "cordova-plugin-cescit-integrity",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CESCIT/cordova-plugin-cescit-integrity.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC"
+}

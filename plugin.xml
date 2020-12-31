@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-cescit-integrity"
+    version="1.0.0">
+    <name>cescit-integrity</name>
+    <description>基于cordova-plugin-antitampering的文件完整性检验 - Android</description>
+    <author>lwj</author>
+    <license>MIT</license>
+
+    <engines>
+        <engine name="cordova" version=">=5.4" />
+    </engines>
+
+    <js-module src="www/AntiTampering.js" name="AntiTampering">
+        <clobbers target="cordova.plugins.cescitIntegrity" />
+    </js-module>
+
+    <!-- <hook type="after_prepare" src="scripts/clear_hashes.js" /> -->
+    <!-- <hook type="before_run" src="scripts/clear_hashes.js" /> -->
+    <hook type="before_build" src="scripts/clear_hashes.js" />
+
+    <hook type="before_run" src="scripts/save_assets_hashes.js" />
+    <hook type="before_run" src="scripts/save_res_hashes.js" />
+    <hook type="before_build" src="scripts/save_assets_hashes.js" />
+    <hook type="before_build" src="scripts/save_res_hashes.js" />
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CescitIntegrity">
+                <param name="android-package" value="com.cescit.integrity.CescitIntegrity"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/com/cescit/integrity/Config.java" target-dir="src/com/cescit/integrity" />
+        <source-file src="src/android/com/cescit/integrity/CescitIntegrity.java" target-dir="src/com/cescit/integrity" />
+        <source-file src="src/android/com/cescit/integrity/AssetsIntegrity.java" target-dir="src/com/cescit/integrity" />
+        <source-file src="src/android/com/cescit/integrity/ResIntegrity.java" target-dir="src/com/cescit/integrity" />
+        <source-file src="src/android/com/cescit/integrity/ApkIntegrity.java" target-dir="src/com/cescit/integrity" />
+        <source-file src="src/android/com/cescit/integrity/DebugDetection.java" target-dir="src/com/cescit/integrity" />
+        <source-file src="src/android/com/cescit/integrity/TamperingException.java" target-dir="src/com/cescit/integrity" />
+        <source-file src="src/android/com/cescit/integrity/HttpUtil.java" target-dir="src/com/cescit/integrity" />
+
+    </platform>
+
+</plugin>
