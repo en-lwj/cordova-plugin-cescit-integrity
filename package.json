@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CESCIT/cordova-plugin-cescit-integrity.git"
+    "url": "git+https://github.com/en-lwj/cordova-plugin-cescit-integrity.git"
   },
   "keywords": [
     "ecosystem:cordova",
