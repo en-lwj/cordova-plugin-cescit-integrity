@@ -27,8 +27,8 @@
 
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="CescitIntegrity">
-                <param name="android-package" value="com.cescit.integrity.CescitIntegrity"/>
+            <feature name="cescitIntegrity">
+                <param name="android-package" value="com.cescit.integrity.cescitIntegrity"/>
                 <param name="onload" value="true" />
             </feature>
         </config-file>
@@ -41,7 +41,5 @@
         <source-file src="src/android/com/cescit/integrity/DebugDetection.java" target-dir="src/com/cescit/integrity" />
         <source-file src="src/android/com/cescit/integrity/TamperingException.java" target-dir="src/com/cescit/integrity" />
         <source-file src="src/android/com/cescit/integrity/HttpUtil.java" target-dir="src/com/cescit/integrity" />
-
     </platform>
-
 </plugin>
