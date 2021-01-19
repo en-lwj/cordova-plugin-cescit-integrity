@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-cescit-integrity"
     version="1.0.0">
-    <name>cescitIntegrity</name>
+    <name>CescitIntegrity</name>
     <description>基于cordova-plugin-antitampering的文件完整性检验 - Android</description>
     <author>lwj</author>
     <license>MIT</license>
@@ -12,8 +12,8 @@
         <engine name="cordova" version=">=5.4" />
     </engines>
 
-    <js-module src="www/AntiTampering.js" name="cescitIntegrity">
-        <clobbers target="cordova.plugins.cescitIntegrity" />
+    <js-module src="www/AntiTampering.js" name="CescitIntegrity">
+        <clobbers target="cordova.plugins.CescitIntegrity" />
     </js-module>
 
     <!-- <hook type="after_prepare" src="scripts/clear_hashes.js" /> -->
@@ -27,8 +27,8 @@
 
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="cescitIntegrity">
-                <param name="android-package" value="com.cescit.integrity.cescitIntegrity"/>
+            <feature name="CescitIntegrity">
+                <param name="android-package" value="com.cescit.integrity.CescitIntegrity"/>
                 <param name="onload" value="true" />
             </feature>
         </config-file>
